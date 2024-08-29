@@ -19,15 +19,22 @@ body {
     --heading-color: #294A6B;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 /* ==================================== Navbar Styling ====================================== */
 
 nav {
     display: grid;
+    position: fixed;
+    top: 0;
+    z-index: 100;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
     background-color: #fff;
     padding: 10px 0px;
+    width: 100%;
 }
 
 .nav-link-container div {
@@ -53,7 +60,6 @@ nav {
     transition: 0.3s;
 }
 
-
 nav * i {
     color: var(--primary-color);
     margin-left: 20px;
@@ -62,7 +68,6 @@ nav * i {
     transition: 0.3s;
 }
 
-.nav-icon-container,
 nav * i:hover {
     color: var(--secondary-color);
     transition: 0.3s;
@@ -83,7 +88,7 @@ nav * i:hover {
 /* ==================================== Product List Section ====================================== */
 
 main {
-    padding: 60px 120px;
+    padding: 160px 120px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,6 +156,7 @@ main {
     display: flex;
     gap: 20px;
     margin-top: 30px;
+    padding-top: 5px;
     overflow-x: auto;
     scroll-padding: 0 24px;
     padding-bottom: 20px;
@@ -168,7 +174,6 @@ main {
     scroll-snap-align: center;
 }
 
-
 .product-card-container:active {
     cursor: grabbing;
 }
@@ -176,7 +181,7 @@ main {
 .product-card-container::-webkit-scrollbar {
     display: none;
 }
- 
+
 .card-img-container {
     display: flex;
 }
@@ -296,10 +301,6 @@ footer h5 {
 
     /* =========== Nav =========== */
 
-    nav {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .nav-link-container {
         grid-column: 1/3;
         grid-row: 2/3;
@@ -310,11 +311,10 @@ footer h5 {
         font-size: 0.8rem;
     }
 
-
     /* ========== Product list =========== */
 
     main {
-        padding: 50px 70px;
+        padding: 150px 70px 50px;
     }
 
     .product-list-section {
@@ -326,6 +326,10 @@ footer h5 {
 @media screen and (width <=768px) {
 
     /* ========== Product list =========== */
+
+    nav {
+        grid-template-columns: 1fr 1fr;
+    }
 
     .product-list-head {
         flex-wrap: wrap;
@@ -347,10 +351,6 @@ footer h5 {
 
 @media screen and (width <=480px) {
     /* ========== Nav =========== */
-
-    nav {
-        grid-template-columns: 1fr 1fr;
-    }
 
     .nav-img-container {
         justify-self: start;
@@ -413,7 +413,7 @@ footer h5 {
     /* ========== Product list =========== */
 
     main {
-        padding: 0px;
+        padding: 90px 0px 0px;
         margin-top: 20px;
     }
 
@@ -451,5 +451,4 @@ footer h5 {
         display: flex;
         gap: 20px;
     }
-
 }
