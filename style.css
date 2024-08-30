@@ -345,7 +345,6 @@ footer h5 {
 
     .footer p {
         width: 100%;
-        line-height: 1.4;
     }
 }
 
@@ -440,7 +439,7 @@ footer h5 {
     }
 
     .product-card-container {
-        justify-content: center;
+        justify-content: start;
         scroll-snap-type: x mandatory;
     }
 
